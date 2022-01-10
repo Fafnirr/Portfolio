@@ -1,0 +1,1219 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+#centered-txt{
+  font-size: 30px;
+}
+
+#required-field{
+  width: 55%;
+  font-size: 16px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*DEBUT DE LA PARTIE HEADER*/
+.header {
+  height: 58px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+}
+
+/*FIXER A LA BARRE DE RECHERCHE*/
+/*nav {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  height: 58px;
+  border-bottom: 3px solid #009fad;
+}*/
+
+nav ul {
+  padding: 0;
+  text-align: center;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+nav.scroll ul {
+  background-color: #ffff;
+}
+
+.hLogo {
+  /*position: fixed;*/  /*FIXER A LA BARRE DE RECHERCHE*/
+  float: left;
+  height: 55px;
+  width: 110px;
+  padding-left: 20px;
+}
+
+.header .icon{
+  height: 57px;
+  background-color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hLogo img{
+  height: 55px;
+  width: 110px;
+  margin-right: 100px;
+}
+
+/*DEBUT MENU DEROULANT HEADER*/
+.icon:hover, .icon:focus {
+  color: #009fad;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  margin-top: 61px;
+  padding-right: 18px;
+  border: 3px solid #009fad;
+  border-top: none;
+  display: none;
+  position: absolute;
+  background-color: #ffff;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  border-color: #009fad;
+}
+
+.show {
+  display: block;
+}
+/*FIN MENU DEROULANT HEADER*/
+
+/*FIN DE PARTIE HEADER*/
+
+/*DEBUT FORM*/
+#form{
+  background-color: white;
+  width: auto;
+  border-radius: 6px;
+}
+
+.tittle{
+  color: #006d77;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.allImg{
+  border: 1px solid #009fad;
+}
+/*FIN FORM*/
+
+/*DEBUT PREMIERE PARTIE DU BODY*/
+#part1{
+  position: relative;
+  text-align: center;
+  color: white;
+  background-color: #009fad;
+  height: 150px;
+  width: auto;
+  font-weight: 700;
+  font-size: 10px;
+  font-family: Arial, Roboto, Helvetica, sans-serif;
+}
+
+#banner{
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.centered {
+  color: #ffff;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#centered-bkgrnd {
+  width: 50px;
+  /*background-color: #fff;*/
+}
+
+.colorLine{
+  height: 3px;
+  width: auto;
+  background-color:#009fad;
+}
+
+/*FIN DE LA PREMIERE PARTIE*/
+
+
+/*DEBUT DEUXIEME PARTIE DU BODY*/
+#part2{
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.parent{
+  display: flex;
+  flex-wrap: wrap;
+}
+/*FIN DE LA DEUXIEME PARTIE*/
+
+/*DEBUT PARTIE LIENS*/
+.hLink2{
+  color: #333;
+  padding: 7px;
+}
+
+#links{
+  width: auto;
+  padding-bottom: 10px;
+}
+
+a{
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #009fad;
+}
+/*FIN PARTIE LIENS*/
+
+
+/*DEBUT PARTIE CONTACT*/
+#name{
+  margin-right: 48px;
+}
+
+.Adresse{
+ width: 16%;
+ border: none;
+ border-bottom: solid 1px black;
+}
+
+.identity{
+  width: 20%;
+  border: none;
+  border-bottom: solid 1px black;
+}
+
+.identity2{
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px black;
+}
+
+.identityDiv{
+  width: 20%;
+}
+
+#street, #postalCode{
+  margin-right: 26px;
+}
+
+#mail{
+  margin-right: 40px;
+}
+
+.required-label{
+  color: #ff0000;
+}
+/*FIN PARTIE CONTACT*/  
+
+/*DEBUT INPUT BORDERS*/
+.impZone{
+  border: none;
+  border-bottom: solid 1px black;
+}
+
+.colors{
+  border: none;
+  border-bottom: solid 1px black;
+}
+
+.showImp{
+  border: none;
+  border-bottom: solid 1px black;
+}
+
+.stampText{
+  border: none;
+  border-bottom: solid 1px black;
+}
+
+.textspace{
+  border: none;
+  border-bottom: solid 1px black;
+}
+/*FIN INPUT BORDERS*/
+
+/*DEBUT DE LA PARTIE BOITE*/
+#boxImages{
+  width: auto;
+  height: 200px;
+  display: flex;
+}
+
+#boxImage{
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+}
+
+#bell{
+  margin-right: 50px;
+}
+
+.diffDims{
+  height: 170px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boxType{
+  padding-left: 25px;
+}
+
+.colorZone1{
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flpDivs{
+  width: 10%;
+  padding-right: 4%;
+}
+
+.flpDims{
+  padding-bottom: 4%;
+  display: flex;
+  justify-content: right;
+}
+
+.colorDivs{
+  padding-right: 2%;
+  height: 20px;
+  display: flex;
+}
+
+.firstPart {
+  width: 100%;
+  padding-bottom: 25px;
+  padding-right: 580px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+}
+
+.scndPart {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+}
+
+.colorCube{
+  border: 1px solid #009fad;
+  width: 20px;
+  height: 20px;
+}
+
+.bold{
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.bxamount{
+  font-size: 13px;
+}
+
+/*Debut Partie Dimensions sur-mesure*/
+#infoContainer3 {
+  display: flex;
+}
+/*Fin Partie Dimensions sur-mesure*/
+
+/*FIN DE PARTIE BOITE*/
+
+/*DEBUT POPUP IMAGE*/
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+  
+#myImg:hover {
+  opacity: 0.7;
+}
+ 
+#myImg2 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+  
+#myImg2:hover {opacity: 0.7;}
+  
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+  
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+  
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+  
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+  
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+  
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+  
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+  
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+  
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+/*FIN DE POPUP IMAGE*/
+
+/*DEBUT PARTIE IMPRESSION*/
+#chkboxImages{
+  width: auto;
+  height: 200px;
+  display: flex;
+}
+
+.imgType{
+  padding-left: 8%;
+}
+
+.impText1{
+  padding-left: 45px;
+}
+
+.impText2{
+  padding-left: 20px;
+}
+
+.impText3{
+  padding-left: 40px;
+}
+
+.zoneContainer{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.impDiv{
+  width: 40%;
+  margin-bottom: 10px;
+}
+
+.impCont{
+  display: flex;
+}
+
+#topLid{
+  width: 5px;
+}
+
+#under {
+  width: 31px;
+}
+
+#back {
+  width: 29px;
+}
+
+#side {
+  width: 84px;
+}
+/*FIN DE PARTIE IMPRESSION*/
+
+/*DEBUT PARTIE CALAGE*/
+.chkDiv{
+  padding-right: 5px;
+}
+
+.chkCal{
+  margin-bottom: 5px;
+}
+
+#calages{
+  width: 300px;
+}
+
+#calContainer{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.diffCals{
+  display: flex;
+  justify-content: right;
+}
+/*FIN PARTIE CALAGE*/
+
+/*DEBUT PARTIE EMBOSSAGE*/
+#embImg{
+  width: auto;
+  height: 200px;
+  display: flex;
+}
+
+.imgEmb1{
+  margin-left: 6%;
+}
+/*FIN PARTIE EMBOSSAGE*/
+
+/*DEBUT PARTIE reCAPTCHA*/
+#captcha{
+  padding-left: 9%;
+}
+/*FIN PARTIE reCAPTCHA*/
+
+/*DEBUT BOUTTON ENVOYER*/
+#btn{
+  border: none;
+  color: white;
+  font-size: 15px;
+  background-color: #009fad;
+  height: 43px;
+  width: 95px;
+  font-weight: 400;
+  border-radius: 5%;
+  margin-left: 570px;
+  margin-bottom: 15px;
+}
+/*FIN BOUTTON ENVOYER*/
+
+/*DEBUT PARTIE FOOTER COLER AU FORMULAIRE*/
+.bottomPage{
+  color: white;
+  background-color: #323437;
+  height: 100px;
+  width: auto;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  padding-right: 30px;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fLink1{
+  color: white;
+}
+
+.fLink{
+  color: white
+}
+
+.fLink1:hover{
+  color: #009fad;
+}
+
+.fLink:hover{
+  color: #009fad;
+}
+
+/*FIN PARTIE FOOTER COLER AU FORMULAIRE*/
+
+
+/*DEBUT PARTIE RESPONSIVE*/
+@media screen and (max-width: 768px) {
+
+  .fLink1{
+      width: 98px;
+  }
+
+  #societyName{
+    width: 74%;
+  }
+
+  header .icon{
+    display: block;
+    float: right;
+  }
+
+  #hText{
+    display: none;
+  }
+
+  .dropdown {
+    display: block;
+  }
+
+  .dropdown-content {
+    margin-left: 55%;
+    min-width: 300px;
+  }
+
+  .identity{
+    width: 33%;
+    border: none;
+    border-bottom: solid 1px black;
+  }
+
+  .identity2{
+    width: 95%;
+    border: none;
+    border-bottom: solid 1px black;
+  }
+
+  .identityDiv{
+    width: 33%;
+  }
+  
+  .Adresse{
+   width: 28%;
+   border: none;
+   border-bottom: solid 1px black;
+  }
+  
+  #postalCode{
+    width: 10%;
+  }
+  
+  #street, #postalCode{
+    margin-right: 20px;
+  }
+  
+  #mail{
+    margin-right: 49px;
+  }
+
+  .diffDims{
+    height: 170px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flpDivs{
+    height: 45px;
+    width: 15%;
+    padding-right: 4%;
+  }
+
+  .flpDims{
+    padding-bottom: 4%;
+    display: flex;
+    justify-content: right;
+  }
+
+  .firstPart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .scndPart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .clrContainer {
+    display: flex;
+  }
+  
+  .zoneContainer{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .impDiv{
+    width: 40%;
+    margin-bottom: 10px;
+  }
+  
+  .impCont{
+    display: flex;
+  }
+  
+  #topLid{
+    width: 5px;
+  }
+  
+  #under {
+    width: 31px;
+  }
+  
+  #back {
+    width: 29px;
+  }
+  
+  #side {
+    width: 84px;
+  }
+
+  .chkDiv{
+    padding-right: 5px;
+  }
+  
+  .chkCal{
+    margin-bottom: 5px;
+  }
+  
+}
+
+@media screen and (min-width: 768px){
+  #container{
+    width: auto;
+  }
+  
+  #all{
+      margin-left: 18px;
+  }
+
+  #part2{
+      background-color: white;
+  }
+
+  .dropdown-content {
+      margin-left: 55%;
+      padding-right: 18px;
+      min-width: 300px;
+  }
+
+  #societyName{
+    width: 74%;
+  }
+
+  .identity{
+    width: 33%;
+    border: none;
+    border-bottom: solid 1px black;
+  }
+  
+  .identity2{
+    width: 95%;
+    border: none;
+    border-bottom: solid 1px black;
+  }
+
+  .identityDiv{
+    width: 33%;
+  }
+
+  .Adresse{
+   width: 28%;
+   border: none;
+   border-bottom: solid 1px black;
+  }
+  
+  #postalCode{
+    width: 10%;
+  }
+  
+  #street, #postalCode{
+    margin-right: 20px;
+  }
+  
+  #mail{
+    margin-right: 49px;
+  }
+
+  .diffDims{
+    height: 170px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flpDivs{
+    height: 45px;
+    width: 15%;
+    padding-right: 4%;
+  }
+
+  .flpDims{
+    padding-bottom: 4%;
+    display: flex;
+    justify-content: right;
+  }
+
+}
+
+@media screen and (min-width: 1024px){
+  header .icon{
+    display: block;
+    float: right;
+    padding: 25px;
+  }
+
+  #container{
+    width: auto;
+  }
+
+  #part1{
+      height: 150px;
+      font-size: 15px;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .dropdown-content {
+    margin-left: 68%;
+  }
+
+  #part2{
+      background-color: #c2c3c4;
+  }
+
+  .btn{
+      margin-left: 550px;
+  }
+
+  #all{
+      margin-left: 180px;
+  }
+
+  .diffDims{
+    height: 170px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flpDivs{
+    height: 45px;
+    width: 10%;
+    padding-right: 4%;
+  }
+
+  .flpDims{
+    padding-bottom: 4%;
+    display: flex;
+    justify-content: right;
+  }
+
+}
+
+@media screen and (max-width: 1140px) {
+  .clrContainer {
+    display: flex;
+    
+  }
+
+  .firstPart {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .scndPart {
+    width: 150px;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .colorDivs {
+    display: flex;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .dropdown-content {
+    margin-left: 70%;
+  }
+
+}
+
+@media screen and (max-width: 1400px){
+
+  #hText{
+    display: none;
+  }
+
+  .dropdown {
+    display: block;
+  }
+
+}
+
+@media screen and (min-width: 1400px){
+
+  #hText{
+    display: block;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  nav ul li {
+    padding: 0;
+    padding-top: 20px;
+  }
+
+  nav ul {
+    padding-left: 2%;
+  }
+
+  #all{
+      padding-left: 200px;
+  }
+
+  .btn{
+      margin-left: 800px;
+  }
+  
+  
+  .img2{
+    padding-left: 4%;
+  }
+
+  .imgType{
+    padding-left: 5%;
+  }
+
+  #societyName{
+    width: 56%;
+  }
+
+  .identity{
+    width: 26%;
+    border: none;
+    border-bottom: solid 1px black;
+  }
+
+  .identity2{
+    width: 95%;
+    border: none;
+    border-bottom: solid 1px black;
+  }
+
+  .identityDiv{
+    width: 26%;
+  }
+  
+  .Adresse{
+   width: 22%;
+   border: none;
+   border-bottom: solid 1px black;
+  }
+  
+  #postalCode{
+    width: 8%;
+  }
+  
+  #street, #postalCode{
+    margin-right: 20px;
+  }
+  
+  #mail{
+    margin-right: 40px;
+  }
+
+  .diffDims{
+    height: 170px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flpDivs{
+    height: 45px;
+    width: 10%;
+    padding-right: 10%;
+  }
+
+  .flpDims{
+    padding-bottom: 4%;
+    display: flex;
+    justify-content: right;
+  }
+}
+
+@media screen and (max-width: 1600px){
+  header .icon{
+    display: block;
+    float: right;
+    padding: 25px;
+  }
+}
+
+/*FIN PARIE RESPONSIVE*/
+
+/*DEBUT PARTIE INPUT TYPE=NUMBER*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
+/*FIN DE PARTIE INPUT*/
+
+input:focus{
+outline: none;
+border-bottom: solid 2px #009fad;
+}
+
+#height{
+margin-left: 15px;
+}
+
+#length{
+margin-right: 15px;
+}
+
+#info{
+  outline: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#info:focus{
+  border-bottom: solid 2px #009fad;
+}
+
+
+#acdb {
+  color: black;
+  
+}
+
+#nmbr {
+  font-weight: 700;
+}
+
+.col_4 {
+  width: 100%;
+  display: flex;
+}
+
+.iCircle {
+  position: relative;
+  width: 6em;
+  height: 3em;
+  padding-left: 5px;
+  padding-right: 2px;
+  box-sizing: initial;
+  background: #fff;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 50%;    
+  line-height: 2em;
+  box-sizing: content-box;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.iCircle .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #006d77;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+
+.iCircle:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.iCircle:hover {
+  color: #006d77;
+  border:0.1em solid #006d77;
+}
+
+/*Couleur des messages d'erreurs*/
+.error{
+  color: red;
+  border-bottom: 1px solid red !important;
+}
+
+
+/*Debut Deuxieme Partie Contact Pour éviter un conflit*/
+/*Début Partie Nom Prénom*/
+#infoContainer1 {
+  width: 100%;
+  display: flex;
+}
+
+#fam {
+  width: 31%;
+}
+
+#name {
+  width: 80%;
+}
+
+#nam {
+  width: 31%;
+}
+
+#firstName {
+  width: 80%;
+}
+/*Fin Partie Nom Prénom*/
+
+/*Début Partie Adresse Postal*/
+#infoContainer2 {
+  width: 100%;
+  display: flex;
+}
+
+#adress {
+  width: 25%;
+}
+
+#street{
+  width: 72%;
+}
+
+#post {
+  width: 12%;
+}
+
+#postalCode {
+  width: 40%;
+}
+
+#town {
+  width: 22%;
+}
+
+#city {
+  width: 86%;
+}
+/*Fin Partie Adresse Postal*/
+
+/*Début Partie Mail et Téléphone*/
+#mailDiv{
+  width: 31%;
+}
+
+#mail{
+  width: 80%;
+}
+
+#tel {
+  width: 30%;
+}
+
+#phone {
+  width: 83%;
+}
+/*Fin Partie Mail et Téléphone*/
+/*Fin Deuxieme Partie Contact Pour éviter un conflit*/

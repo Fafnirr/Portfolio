@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="petite_resolution.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="js/dist/jquery.validate.js"></script>
+    <script src="js/dist/localization/messages_fr.min.js"></script>
+    <script src="natif.js"></script>
+    <script>
+        //Partie Captcha JS ne pas toucher
+        function onSubmit(token) {
+            document.getElementById("form").submit();
+        }
+
+        function onClick(e) {
+            e.preventDefault();
+            grecaptcha.ready(function () {
+                grecaptcha.execute('6Lc2drIbAAAAAOoOmdc-z5-wzlsS7N_7WrfGMR-y', { action: 'submit' }).then(function (token) {
+                    console.log(token);
+                });
+            });
+        }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lc2drIbAAAAAOoOmdc-z5-wzlsS7N_7WrfGMR-y"></script>
+    <link rel="icon" type="img/icon" href="photos/Favicon-Au-Comptoir-des-Boites.png" size="512">
+    <title>Demandez votre devis en 3 minutes !</title>
+</head>
+
+
+<body>
+    <header class="header">
+        <nav id="myHeader">
+            <div class="hLogo">
+                <a href="https://atelierdesboites.com/"><img src="photos/Logo-Au-Comptoir-des-Boites.jpg" /></a>
+            </div>
+            <div id="hText">
+                <ul>
+                    <li><a href="https://atelierdesboites.com/formulaire-de-devis/" class="hLink1">DEMANDER VOTRE DEVIS
+                            EN 3 MIN &emsp; &emsp;</a></li>
+                    <li><a href="https://atelierdesboites.com/boite/" class="hLink2">TYPES DE BOITES &emsp; &emsp;</a>
+                    </li>
+                    <li><a href="https://atelierdesboites.com/papiers/" class="hLink2">MATERIAUX & FINITIONS &emsp;
+                            &emsp;</a></li>
+                    <li><a href="https://atelierdesboites.com/impression/" class="hLink2">TYPES D'IMPRESSION &emsp;
+                            &emsp;</a></li>
+                    <li><a href="https://atelierdesboites.com/contactez-nous/" class="hLink2">CONTACT &emsp; &emsp; </a>
+                    </li>
+                    <li><a href="https://atelierdesboites.com/impression-3/" class="hLink2">NOS REALISATIONS</a></li>
+                </ul>
+            </div>
+            <div class="dropdown"><button class="icon" onclick="btnDrpdwn()">&#9776</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="https://atelierdesboites.com/formulaire-de-devis/" class="hLink2">DEMANDER VOTRE DEVIS EN 3
+                        MIN &emsp; &emsp;</a>
+                    <a href="https://atelierdesboites.com/boite/" class="hLink2">TYPES DE BOITES &emsp; &emsp;</a>
+                    <a href="https://atelierdesboites.com/papiers/" class="hLink2">MATERIAUX & FINITIONS &emsp;
+                        &emsp;</a>
+                    <a href="https://atelierdesboites.com/impression/" class="hLink2">TYPES D'IMPRESSION &emsp;
+                        &emsp;</a>
+                    <a href="https://atelierdesboites.com/contactez-nous/" class="hLink2">CONTACT &emsp; &emsp; </a>
+                    <a href="https://atelierdesboites.com/impression-3/" class="hLink2">NOS REALISATIONS</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="container">
+        <div class="colorLine"></div>
+        <!--Partie 1 Bannière Superieur au formulaire-->
+        <div id="part1">
+            <div id="banner" style="width:100%; height: 100%;"></div>
+            <h1 class="centered" style="width: 100%;">
+                <span id="centered-bkgrnd">
+                    <label id="centered-txt">Demandez votre devis en 3 minutes !</label>
+                </span>
+            </h1>
+        </div>
+        <!--Fin Partie Bannière-->
+        <div class="colorLine"></div>
+        <div id="part2">
+            <!--Partie 2 Formulaire et Footer coller-->
+            <form method="POST" name="form1" id="form" action="index.php" enctype="multipart/form-data">
+                <div id="all">
+                    <!--Debut Partie Sociétés-->
+                    <div>
+                        <div id="required-field">
+                            <span class="required-label">*</span>champs obligatoires
+                        </div>
+                        <br>
+                        <div id="contactCheckbox">
+                            <label class="tittle">
+                                Vous êtes ? <span class="required-label">*</span>
+                            </label>
+                            <br><br>
+                            <div class="parent">
+                                <div class="chkDiv">
+                                    <label for="company" class="firm">
+                                        <span>Entreprise </span>
+                                    </label>
+                                    <input class="limitCheckBox" type="checkbox" name="company" id="company" />
+                                </div>
+                                <div class="chkDiv">
+                                    <label for="agency" class="firm">
+                                        <span>Agence de Communication </span>
+                                    </label>
+                                    <input class="limitCheckBox" type="checkbox" name="company" id="agency" />
+                                </div>
+                                <div class="chkDiv">
+                                    <label class="firm">
+                                        <span>Particulier </span>
+                                    </label>
+                                    <input class="limitCheckBox" type="checkbox" name="company" id="particular" />
+                                </div>
+                                <!--COLLER ICI-->
+                            </div>
+                        </div><br>
+                        <!--CHAMP SOCIETE-->
+                        <div style="display: none;" id="society">
+                            <label class="tittle">Société <span class="required-label">*</span></label>
+                            <br>
+                            <br>
+                            <input class="textspace" placeholder="Société" type="text" type="hidden" name="societyName"
+                                id="societyName" />
+                            <br><br>
+                        </div>
+                        <!--CHAMP SOCIETE-->
+                        <br>
+                    </div>
+                    <!--Fin Partie Société-->
+                    <!--Debut Partie d'Information du client-->
+                    <div>
+                        <!--Debut Partie Identité-->
+                        <div class="col_3">
+                            <label class="tittle">Identité <span class="required-label">*</span></label>
+                            <br><br>
+                            <div id="infoContainer1">
+                                <div id="fam">
+                                    <input class="identity" type="text" name="familyName" placeholder="Nom" id="name" />
+                                </div>
+                                <div id="nam">
+                                    <input class="identity" type="text" name="name" placeholder="Prénom"
+                                        id="firstName" />
+                                </div>
+                            </div>
+                            <br><br><br>
+                        </div>
+                        <!--Fin Partie Identité-->
+                        <!--Debut Partie Adresse-->
+                        <div class="col_3">
+                            <label class="tittle">Adresse de livraison<span class="required-label">*</span></label>
+                            <br><br>
+                            <div id="infoContainer2">
+                                <div id="adress">
+                                    <input class="Adresse" type="text" name="street" placeholder="Adresse Postale"
+                                        id="street" />
+                                </div>
+                                <div id="post">
+                                    <input class="textspace" type="number" name="postalCode" placeholder="Code Postal"
+                                        min="01000" id="postalCode" />
+                                </div>
+                                <div id="town">
+                                    <input class="Adresse" type="text" name="city" placeholder="Ville" id="city" />
+                                </div>
+                            </div>
+                            <br><br><br>
+                        </div>
+                        <!--Fin Partie Adresse-->
+                        <div class="col_3">
+                            <label class="iCircle" style="font-size: 12px;">i
+                                <span class="tooltiptext">Nous sommes susceptibles de vous contacter par téléphone pour
+                                    des
+                                    renseignements complémentaires</span>
+                                <!---Message afficher dans le i a côté de contact-->
+                            </label>
+                            <label class="tittle">Contact <span class="required-label">*</span></label>
+                            <br><br>
+                            <div class="col_4">
+                                <div id="mailDiv">
+                                    <input class="identity" type="email" name="mail" placeholder="Mail" id="mail" />
+                                </div>
+                                <div id="tel">
+                                    <input class="identity" type="tel" name="phone" placeholder="Téléphone"
+                                        id="phone" />
+                                </div>
+                            </div>
+                            <br><br><br>
+                        </div>
+                        <!--Fin Partie Adresse-->
+                    </div>
+                    <!--Fin Partie Infos Client-->
+                    <div>
+                        <!--Type de boite avec photo-->
+                        <label class="tittle">Type de Boîte <span class="required-label">*</span></label>
+                    </div>
+                    <br>
+                    <div id="boxTable">
+                        <div id="boxImages">
+                            <div>
+                                <img style="width:110px; height: 110px;" class="allImg" id="myImg" class="img-fLuid"
+                                    onclick="myPopup()" src="photos/boîte-cloche.JPG" /><br>
+                                Livrée montée <br>
+                                <label class="bxamount"> Mini 100 exemplaires</label>
+                                <!--label pour avoir une taille différente-->
+                                <br>
+                                <label class="boxes">
+                                    <span class="bold">Cloche </span>
+                                    <!--information récupérer en javaScript puis php pour l'email-->
+                                </label>
+                                <input class="textBox" type="checkbox" name="boxs" id="bell" />
+                            </div>
+                            <div class="img2">
+                                <img style="width:110px; height: 110px;" class="allImg" id="myImg" onclick="myPopup()"
+                                    src="photos/Boîte-d'expédition.JPG" /><br>
+                                <label> Livrée à plat <br>
+                                    <label class="bxamount"> Mini 200 exemplaires</label>
+                                    <!--label pour avoir une taille différente-->
+                                    <br>
+                                    <label class="boxes">
+                                        <span class="bold">Pour envoi </span>
+                                        <!--information récupérer en javaScript puis php pour l'email-->
+                                    </label>
+                                </label>
+                                <input class="textBox" type="checkbox" name="boxs" id="expedition" />
+                            </div>
+                            <div class="img2">
+                                <img style="width:110px; height: 110px;" class="allImg" id="myImg" onclick="myPopup()"
+                                    src="photos/boîte-à-rabat-aimanté-ex.jpg" /><br>
+                                <!--Text du SPAN en dessous Peut-être changer-->
+                                <label>
+                                    <span id="flapTxt">
+                                        Entièrement sur-mesure <br>
+                                        <label class="bxamount">Mini 1000 exemplaires</label>
+                                        <!--label pour avoir une taille différente-->
+                                    </span>
+                                </label>
+                                <br>
+                                <label class="boxes">
+                                    <span class="bold">À rabat aimanté </span>
+                                    <!--information récupérer en javaScript puis php pour l'email-->
+                                </label>
+                                <input class="textBox" type="checkbox" name="boxs" id="flap" />
+                            </div>
+                            <div class="img2">
+                                <img style="width:110px; height: 110px;" class="allImg" id="myImg" onclick="myPopup()"
+                                    src="photos/boîte-à-rabat-aimanté.jpg" /><br>
+                                <label class="boxes">
+                                    <span style="display: none;">À rabat existant :</span>
+                                    <!--information récupérer en javaScript puis php pour l'email-->
+                                </label>
+                                <label>
+                                    Modèles existants<br>
+                                    <span class="bxamount">Mini 100 examplaires</span>
+                                    <!--label pour avoir une taille différente-->
+                                </label>
+                                <br>
+                                <label class="bold"> À rabat aimanté </label>
+                                <!--élément affiché sur la page web-->
+                                <input class="textBox" type="checkbox" name="boxs" id="existingFlap" />
+                            </div>
+                            <div class="img2"><img style="width:110px; height: 110px;" class="allImg" id="myImg"
+                                    onclick="myPopup()" src="photos/specifique.jpg" /><br>
+                                <label>
+                                    Coffrets
+                                    bois, à tiroir, <br> à gorge, à fenêtre,livre, <br> d'expedition couleur... <br>
+                                    <label class="bxamount">Mini 100 exemplaires</label>
+                                    <!--label pour avoir une taille différente-->
+                                </label>
+                                <br>
+                                <label class="boxes"><span class="bold">Spécifique </span></label>
+                                <!--information récupérer en javaScript puis php pour l'email-->
+                                <input class="textBox" type="checkbox" name="boxs" id="specific" />
+                            </div>
+
+                            <!-- Model Pour Popup -->
+                            <div id="myModal" class="modal">
+                                <span class="close">&times;</span>
+                                <img id="modal-img" class="modal-content"
+                                    src="photos/S-Famille-BOITES-CLOCHE-HAUTE-LUXE-NOIRE.jpg">
+
+
+                                <div id="caption"></div>
+                            </div>
+                        </div>
+                        <br><br>
+                        <!--Fin Type de Boîtes-->
+                    </div>
+                    <div id="flapDim" style="display: none;">
+                        <!--Dimensions Boîte à rabat éxistante-->
+                        <br>
+                        <label class="tittle">Veuillez indiquer les dimensions de la boîte voulue
+                            <span class="required-label">*</span>
+                        </label>
+                        <br><br>
+                        <div class="diffDims">
+                            <!--Partie superieur des dimensions-->
+                            <div class="flpDivs">
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 10x10x7</span>
+                                        <input type="checkbox" name="dimensions" class="inptDims" />
+                                    </label>
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 10x10x10</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 12x7x2</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 15x11.3x2.4</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 15x15x5</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 18x18x8</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 19x9x7.2</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                            </div>
+                            <br>
+                            <!--Premiere Partie Centrale-->
+                            <div class="flpDivs">
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 20x20x2</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 21.5x21.5x7.5</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 21.7x21.7x10</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 22x11x10</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 22x16x3</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 22x22x22</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 23x23x10.5</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                            </div>
+                            <br>
+                            <!--Seconde Partie Centrale-->
+                            <div class="flpDivs">
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 25x25x9</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 30x21x2.2</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 31x23x4.5</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 33x10x9.5</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 33x22.5x10</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 36x22x6</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 37.5x26x6.5</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                            </div>
+                            <br>
+                            <!--Partie Inferieur-->
+                            <div class="flpDivs">
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 38x28x12</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 40x12x12</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 40x14x3</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 40x30x15</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 40x40x20</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 43x31x5</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 44x30x12</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                                <div class="flpDims">
+                                    <label class="flapLabel">
+                                        <span> 60x45x12</span>
+                                    </label>
+                                    <input type="checkbox" name="dimensions" class="inptDims" />
+                                </div>
+                            </div>
+                        </div>
+                        <br><br><br><br>
+                        <!--Fin Dimensions Boîte à rabat-->
+                    </div>
+                    <div>
+                        <!--Partie Couleur de la Boîte avec apparition des couleurs -->
+                        <div id="mainColors" style="display: block;">
+                            <label class="tittle">Couleur de la boîte <span
+                                    class="required-label">*</span></label><br><br>
+                            <div class="parent">
+                                <div class="chkDiv">
+                                    <label class="bwo">
+                                        <span>Noir </span>
+                                    </label>
+                                    <input class="colors" type="checkbox" name="choseColor" id="black" required />
+                                </div>
+                                <div class="chkDiv">
+                                    <label class="bwo">
+                                        <span>Blanc </span>
+                                    </label>
+                                    <input class="colors" type="checkbox" name="choseColor" id="white" required />
+                                </div>
+                                <div class="chkDiv">
+                                    <label class="bwo">
+                                        Autre couleur
+                                        <span style="display: none;"> Autre couleur : </span>
+                                    </label>
+                                    <input class="colors" type="checkbox" name="other" id="other" required />
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="partColor" id="partColor" style="display: none;"><br><br>
+                            <label class="tittle">Veuillez sélectionner une couleur <span
+                                    class="required-label">*</span></label>
+                            <br><br>
+                            <div class="clrContainer">
+                                <!--si besoin d'ajouter une couleur creer ou copier une <div class="colorDivs"> et changer la couleur-->
+                                <div class="firstPart">
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(255, 191, 212);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label> Rose</label>
+                                            <span style="display:none;">Rose (papier 3)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="pink" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(224, 204, 143);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label> Beige</label>
+                                            <span style="display: none;">Beige (papier 1)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="beig" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(242, 212, 87);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label> Jaune Moutarde</label>
+                                            <span style="display: none;">Jaune Moutarde (papier 2)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="yellow" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(237, 120, 0);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label> Orange</label>
+                                            <span style="display: none;">Orange (papier 5)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="orange" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(255, 69, 28);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label> Orange Foncé</label>
+                                            <span style="display: none;">Orange Foncé (papier 10)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="grey" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(219, 0, 0);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label> Rouge</label>
+                                            <span style="display: none;">Rouge (papier 9)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="red" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(107, 0, 0);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label> Bordeaux</label>
+                                            <span style="display: none;">Bordeaux (papier 8)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="brd" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(212, 94, 212);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label> Violet</label>
+                                            <span style="display: none;">Violet (papier 4)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="prpl" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(133, 133, 133);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label>Gris</label>
+                                            <span style="display: none;">Gris (papier 16)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="clr1" />
+                                    </div>
+                                </div>
+                                <div class="scndPart">
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(110, 207, 242);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label>Bleu Ciel</label>
+                                            <span style="display: none;">Bleu Ciel (papier 7)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="skyBlue" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(112, 191, 250);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label>Bleu Clair</label>
+                                            <span style="display: none;">Bleu Clair (papier 18)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="navyBlue" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(0, 127, 153);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label>Bleu Pétrol</label>
+                                            <span style="display: none;">Bleu Pétrol (papier 6)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="pb" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(0, 214, 64);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label>Vert</label>
+                                            <span style="display: none;">Vert (papier 13)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="jadeG" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(112, 222, 54);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label>Vert Pomme</label>
+                                            <span style="display: none;">Vert Pomme (papier 12)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="vp" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(0, 107, 0);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label>Vert Foncé</label>
+                                            <span style="display: none;">Vert Foncé(papier 14)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="clr3" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(69, 0, 153);" class="colorCube"></div>
+                                        &ensp;
+                                        <label class="chkColor">
+                                            <label>Bleu Violacé</label>
+                                            <span style="display: none;">Bleu Violacé (papier 11)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="clr2" />
+                                    </div>
+                                    <div class="colorDivs">
+                                        <div style="background-color: rgb(92, 5, 0);" class="colorCube"></div>&ensp;
+                                        <label class="chkColor">
+                                            <label>Marron</label>
+                                            <span style="display: none;">Marron (papier 15)</span>
+                                        </label>
+                                        <input class="diffColors" type="checkbox" name="colors" id="brwn" />
+                                    </div>
+                                </div>
+                                <!--Ajouter ici la nouvelle div-->
+                            </div>
+                            <br>
+                        </div>
+                        <br><br>
+                        <!--Partie Dimensions sur-mesure-->
+                        <div id="customDims" style="display: block;">
+                            <label class="tittle">Dimensions intérieures de la Boîte (en mm) <span
+                                    class="required-label">*</span></label>
+                            <br><br>
+                            <div id="infoContainer3">
+                                <div id="l">
+                                    <input class="textspace" type="number" name="length" placeholder="Longueur"
+                                        id="length"  step="0.01" />
+                                </div>
+                                <div id="w">
+                                    <input class="textspace" type="number" name="width" placeholder="Largeur" id="width"
+                                         step="0.01" />
+                                </div>
+                                <div id="h">
+                                    <input class="textspace" type="number" name="height" placeholder="Hauteur"
+                                        id="height"  step="0.01" />
+                                </div>
+                            </div>
+                            <br><br><br>
+                        </div>
+                        <!--Fin Dimensions sur-mesure-->
+                        <div>
+                            <!--Partie Impression-->
+                            <div>
+                                <label class="tittle">Impression <span class="required-label">*</span></label><br><br>
+                                <div class="parent">
+                                    <div class="chkDiv">
+                                        <label class="imp">
+                                            <span>Oui </span>
+                                        </label>
+                                        <input class="showImp" type="checkbox" name="withImp" id="withImp" required />
+                                    </div>
+                                    <div class="chkDiv">
+                                        <label class="imp">
+                                            <span>Non </span>
+                                        </label>
+                                        <input class="showImp" type="checkbox" name="withOutImp" id="withOutImp"
+                                            required />
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                            <div id="impressions" style="display:none">
+                                <!--Debut Faces D'impression-->
+                                <label class="tittle">
+                                    Veuillez choisir le nombre de face à imprimer <span class="required-label">*</span>
+                                </label>
+                                <br><br>
+                                <input class="textspace" type="number" name="faces" id="faces" min="1">
+                                <!--Fin faces D'impression-->
+                                <br><br>
+                                <div>
+                                    <!--Debut Zone D'impression-->
+                                    <div>
+                                        <label class="tittle">Sélection de la zone d'impression
+                                            <span class="required-label">*</span>
+                                        </label>
+                                        <br><br>
+                                        <div class="zoneContainer">
+                                            <div class="impCont">
+                                                <div id="topLid"></div>
+                                                <div class="impDiv">
+                                                    <label class="zones">
+                                                        <span> Dessus Couvercle</span>
+                                                        <!--texte afficher sur le formulaire et récupérer dans l'email-->
+                                                    </label>
+                                                    <input class="impZone" type="checkbox" name="impZone1" id="lid"
+                                                        required />
+                                                </div>
+                                            </div>
+                                            <div class="impDiv">
+                                                <label class="zones">
+                                                    <span> Dessous couvercle</span>
+                                                    <!--texte afficher sur le formulaire et récupérer dans l'email-->
+                                                </label>
+                                                <input class="impZone" type="checkbox" name="impZone2" id="reversLid"
+                                                    required />
+                                            </div>
+                                            <div class="impCont">
+                                                <div id="under"></div>
+                                                <div class="impDiv">
+                                                    <label class="zones">
+                                                        <span> Dessous boîte</span>
+                                                        <!--texte afficher sur le formulaire et récupérer dans l'email-->
+                                                    </label>
+                                                    <input class="impZone" type="checkbox" name="impZone3" id="underBox"
+                                                        required />
+                                                </div>
+                                            </div>
+                                            <div class="impCont">
+                                                <div id="back"></div>
+                                                <div class="impDiv">
+                                                    <label class="zones">
+                                                        <span> Fond intérieur</span>
+                                                        <!--texte afficher sur le formulaire et récupérer dans l'email-->
+                                                    </label>
+                                                    <input class="impZone" type="checkbox" name="impZone4" id="interior"
+                                                        required />
+                                                </div>
+                                            </div>
+                                            <div class="impCont">
+                                                <div id="side"></div>
+                                                <div class="impDiv">
+                                                    <label class="zones">
+                                                        <span> Côtés</span>
+                                                        <!--texte afficher sur le formulaire et récupérer dans l'email-->
+                                                    </label>
+                                                    <input class="impZone" type="checkbox" name="impZone5" id="sides"
+                                                        required />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Fin Zone D'impression-->
+                                    <br>
+                                    <!--Debut Type D'impression-->
+                                    <div id="chkboxTable">
+                                        <label class="tittle">Sélection du type d'impression
+                                            <span class="required-label">*</span>
+                                        </label>
+                                        <br><br>
+                                        <div id="chkboxImages">
+                                            <div>
+                                                <img style="width:110px; height: 110px;" class="allImg" id="myImg"
+                                                    class="img-fLuid" onclick="myPopup()"
+                                                    src="photos/marquage-a-chaud.jpg" /><br>
+                                                <label class="impType">Marquage
+                                                    <span style="display: none;"> Marquage à chaud</span>
+                                                    <!--information récupérer dans l'email-->
+                                                    <br>à chaud
+                                                </label>
+                                                <input class="stampText" type="checkbox" name="printType"
+                                                    id="hotStamping" /><br>
+                                            </div>
+                                            <div class="imgType">
+                                                <img style="width:110px; height: 110px;" class="allImg" id="myImg"
+                                                    class="img-fLuid" onclick="myPopup()"
+                                                    src="photos/serigraphie-1-couleur.jpg" /><br>
+                                                <label class="impType">Sérigraphie
+                                                    <span style="display: none;">Sérigraphie une couleur</span>
+                                                    <!--information récupérer dans l'email-->
+                                                    <br>une couleur
+                                                </label>
+                                                <input class="stampText" type="checkbox" name="printType"
+                                                    id="Silkscreen1" />
+                                            </div>
+                                            <div class="imgType">
+                                                <img style="width:110px; height: 110px;" class="allImg" id="myImg"
+                                                    class="img-fLuid" onclick="myPopup()"
+                                                    src="photos/serigraphie-2-couleurs.jpg" /><br>
+                                                <label class="impType">Sérigraphie
+                                                    <span style="display: none;">Serigraphie deux couleurs</span>
+                                                    <!--information récupérer dans l'email-->
+                                                    <br>deux couleurs
+                                                </label>
+                                                <input class="stampText" type="checkbox" name="printType"
+                                                    id="Silkscreen2" />
+                                            </div>
+                                            <div class="imgType">
+                                                <img style="width:110px; height: 110px;" class="allImg" id="myImg"
+                                                    class="img-fLuid" onclick="myPopup()"
+                                                    src="photos/Quadrichromie.JPG" /><br>
+                                                <label class="impType">
+                                                    <span>Quadrichromie </span>
+                                                    <!--information récupérer dans l'email-->
+                                                </label>
+                                                <input class="stampText" type="checkbox" name="printType"
+                                                    id="quadri" /><br>
+                                                <label>(logo avec plusieurs <br> couleurs ou boîte <br> à
+                                                    motifs)</label>
+                                            </div>
+                                            <!--Placer la nouvelle div ici-->
+                                        </div>
+
+                                        <!-- Model Pour Popup -->
+                                        <div id="myModal" class="modal">
+                                            <span class="close">&times;</span>
+                                            <img id="modal-img" class="modal-content"
+                                                src="photos/S-Famille-BOITES-CLOCHE-HAUTE-LUXE-NOIRE.jpg">
+
+
+                                            <div id="caption"></div>
+                                        </div>
+                                    </div>
+                                    <!--Fin Type D'impression-->
+                                </div>
+                            </div>
+                            <br>
+                            <!--Fin Partie Impression-->
+                        </div>
+                        <br>
+                        <div>
+                            <!--Partie Calage-->
+                            <label class="iCircle" style="font-size: 12px;">i
+                                <span class="tooltiptext">
+                                    A défaut de schéma ou <br> de plan de calage, nous <br> ne pourrons établir un devis
+                                    pour cet accessoire
+                                </span>
+                                <!--Message afficher dans le i a côté de calage-->
+                            </label>
+                            <label class="tittle">Calage<span class="required-label">*</span></label>
+                            <br><br>
+                            <div>
+                                <div class="parent">
+                                    <div class="chkDiv">
+                                        <label class="cal">
+                                            <span>Oui </span>
+                                        </label>
+                                        <input class="wedging" type="checkbox" name="withWedging" id="withWedging"
+                                            required />
+                                    </div>
+                                    <div class="chkDiv">
+                                        <label class="cal">
+                                            <span>Non </span>
+                                        </label>
+                                        <input class="wedging" type="checkbox" name="withOutWedging" id="withOutWedging"
+                                            required />
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                            <!--Debut Type De Calage-->
+                            <div id="calages" style="display:none">
+                                <div>
+                                    <input type="file" name="file1" />
+                                </div>
+                                <br>
+                                <div id="calContainer">
+                                    <!--Copier la div et changer le text dans le span-->
+                                    <div class="diffCals">
+                                        <label class="calType">
+                                            <span>Cavalier Carton avec emporte-pièces </span>
+                                            <!--texte afficher sur le formulaire et récupérer dans l'email-->
+                                        </label>
+                                        <input class="chkCal" type="checkbox" name="wedges" id="cookieCutters" />
+                                    </div>
+                                    <div class="diffCals">
+                                        <label class="calType">
+                                            <span>Croisillons carton </span>
+                                            <!--texte afficher sur le formulaire et récupérer dans l'email-->
+                                        </label>
+                                        <input class="chkCal" type="checkbox" name="wedges" id="cardboardBraces" />
+                                    </div>
+                                    <div class="diffCals">
+                                        <label class="calType">
+                                            <span>Rehausse fond de boîte en carton </span>
+                                            <!--texte afficher sur le formulaire et récupérer dans l'email-->
+                                        </label>
+                                        <input class="chkCal" type="checkbox" name="wedges" id="caseBack" />
+                                    </div>
+                                    <div class="diffCals">
+                                        <label class="calType">
+                                            <span>Mousse de fond sans découpe </span>
+                                        </label>
+                                        <input class="chkCal" type="checkbox" name="wedges" id="foam" />
+                                    </div>
+                                    <div class="diffCals">
+                                        <label class="calType">
+                                            <span>Mousse avec découpe</span> (plan obligatoire)
+                                            <!--texte afficher sur le formulaire et récupérer dans l'email-->
+                                        </label>
+                                        <input class="chkCal" type="checkbox" name="wedges" id="foamCutout" />
+                                    </div>
+                                    <!--Ajouter ici la nouvelle div-->
+                                </div>
+                            </div>
+                            <!--FIN DES OPTIONS DE CALAGE-->
+                            <br>
+                            <!--Fin Partie Calage-->
+                        </div>
+                        <!--<div>
+                            <label class="tittle">Embossage (relief)<span class="required-label">*</span></label>
+                            <div><br>
+                                <div id="embImg">
+                                    <div><img style="width:110px; height: 110px;" class="allImg" id="myImg"
+                                            class="img-fLuid" onclick="myPopup()"
+                                            src="photos/S-Famille-BOITES-CLOCHE-HAUTE-LUXE-NOIRE.jpg" /><br><input
+                                            type="checkbox" class="emb" name="embossing" id="withEmbImp" /><label
+                                            class="embossing">
+                                            <span> Avec impression</span></label></div>
+                                    <div class="imgEmb1"><img style="width:110px; height: 110px;" class="allImg"
+                                            id="myImg" class="img-fLuid" onclick="myPopup()"
+                                            src="photos/embossage-sans-imp.jpg" /><br><input type="checkbox" class="emb"
+                                            name="embossing" id="withOutEmbImp" /><label class="embossing">
+                                            <span> Sans impression</span></label></div>
+                                    <div class="imgEmb1"><img style="width:110px; height: 110px;" class="allImg"
+                                            id="myImg" class="img-fLuid" onclick="myPopup()"
+                                            src="photos/S-Famille-BOITES-CLOCHE-HAUTE-LUXE-NOIRE.jpg" /><br><input
+                                            type="checkbox" class="emb" name="embossing" id="withOutEmb" /><label
+                                            class="embossing"><span>
+                                                Sans Embossage</span></label></div>
+                                </div>
+                                <-- Model Pour Popup --
+                                <div id="myModal" class="modal">
+                                    <span class="close">&times;</span>
+                                    <img id="modal-img" class="modal-content"
+                                        src="photos/S-Famille-BOITES-CLOCHE-HAUTE-LUXE-NOIRE.jpg">
+
+
+                                    <div id="caption"></div>
+                                </div>
+                        </div>-->
+                        <!--Debut Partie Budget-->
+                        <div>
+                            <label class="iCircle" style="font-size: 12px;">i
+                                <span class="tooltiptext">
+                                    Le Budget indicatif permet de valider un choix technique
+                                    adapté. <br> Nous recherchons le meilleur rapport rendu/budget
+                                </span>
+                                <!--Message afficher dans le i a côté du Budget-->
+                            </label>
+                            <label class="tittle">Budget unitaire par boite<span class="required-label">*</span></label>
+                            <br><br>
+                            <input class="textspace" type="text" name="budget" id="budget" size="20px" />
+                            <br><br><br>
+                        </div>
+                        <!--Fin Partie Budget-->
+                        <!--Debut Partie Quantité-->
+                        <div>
+                            <label class="tittle">Quantité <span class="required-label">*</span></label>
+                            <br><br>
+                            <input class="textspace" id="amount" type="number" name="amount" value="100" min="100" />
+                            <!--Modifier la valeur value="" Pour changer le nomber afficher et min="" pour le minimum-->
+                            <br><br><br>
+                        </div>
+                        <!--Fin Partie Quantité-->
+                        <!--Debut Partie Délai-->
+                        <div>
+                            <label class="iCircle" style="font-size: 12px;">i
+                                <span class="tooltiptext">
+                                    Délai de réalisation incompressible de trois <br> semaines minimum
+                                </span>
+                                <!--Message afficher dans le i a côté du Délai-->
+                            </label>
+                            <label class="tittle">Délai <span class="required-label">*</span></label>
+                            <br><br>
+                            <div class="parent">
+                                <div class="chkDiv">
+                                    <label class="delai">
+                                        <span>Sans délai </span>
+                                    </label>
+                                    <input class="choseDelai" type="checkbox" name="delai" id="noDelai" />
+                                </div>
+                                <div class="chkDiv">
+                                    <label class="delai">Livraison impérative
+                                        <span style="display: none;"> Livraison impérative : </span>
+                                    </label>
+                                    <input class="choseDelai" type="checkbox" name="delai" id="deliveryDate" />
+                                </div><br>
+                            </div>
+                        </div><br>
+                        <div id="divDate" style="display: none;">
+                            <br>
+                            <label class="tittle">Veuillez choisir une date de délai
+                                <span class="required-label">*</span>
+                            </label><br>
+                            <input class="textspace" type="date" min="2021-09-01" placeholder="jj-mm-aaaa"
+                                name="deadline" id="deadline" size="10px" />
+                            <!--Pour imposer une date de livraison changer le min du dessus-->
+                        </div>
+                        <!--Fin Partie Délai-->
+                        <br><br>
+                        <!--Debut Partie Fichier-->
+                        <div>
+                            <label class="tittle">Vos fichiers textes ou logos </label>
+                            <br><br>
+                            <input type="file" name="file2" /><br><br>
+                            <input type="file" name="file3" /><br><br>
+                            <input type="file" name="file4" />
+                            <br><br><br>
+                        </div>
+                        <!--Fin Partie Fichier-->
+                        <!--Partie Commentaires-->
+                        <div>
+                            <label class="tittle">Information(s) complémentaire(s)</label>
+                            <br><br>
+                            <textarea class="textspace" rows="5" cols="70" name="info" id="info"></textarea>
+                        </div><br>
+                        <!--Fin Commentaires-->
+                        <br />
+                        <br>
+                        <!--Bouton Envoyer contenant la clé du site pour le recaptcha-->
+                        <input type="submit" name="g-recaptcha-response" id="btn" value="ENVOYER"
+                            data-sitekey="6Lc2drIbAAAAAOoOmdc-z5-wzlsS7N_7WrfGMR-y" data-callback='onSubmit'
+                            data-action='submit' />
+                    </div>
+                </div>
+        </div>
+        <div class="bottomPage">
+            <!--Partie Footer/Bas de page-->
+            <a href="https://atelierdesboites.com/formulaire-de-devis/" class="fLink1">DEMANDER VOTRE DEVIS EN 3 MIN
+                &emsp;
+                &emsp;</a>
+            <a href="https://atelierdesboites.com/boite/" class="fLink">TYPES DE BOITES &emsp;
+                &emsp;</a>
+            <a href="https://atelierdesboites.com/papiers/" class="fLink">MATERIAUX & FINITIONS
+                &emsp; &emsp;</a>
+            <a href="https://atelierdesboites.com/impression/" class="fLink">TYPES D'IMPRESSION
+                &emsp; &emsp;</a>
+            <a href="https://atelierdesboites.com/contactez-nous/" class="fLink">CONTACT &emsp;
+                &emsp; </a>
+            <a href="https://atelierdesboites.com/impression-3/" class="fLink">NOS
+                REALISATIONS</a>
+            <!--Fin Partie Footer/Bas de page-->
+        </div>
+        </form>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async
+            defer></script>
+    </div>
+    </div>
+    <script>
+        $("#form").validate();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="validate.js"></script>
+</body>
+
+</html>

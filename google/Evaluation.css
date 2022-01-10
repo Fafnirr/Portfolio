@@ -1,0 +1,139 @@
+*{
+    font-family: arial, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+#case1{
+    margin-right: 10px;
+    margin-top: 25px;
+    height: 44px;
+    font-family: arial, sans-serif;
+    display: flex;
+    justify-content: flex-end;
+}
+
+a, a:hover, a:visited, a:active {
+    color: gray;
+    text-decoration: none;
+}
+
+#Gmail, #images, #logo1{
+    margin-right: 13px;
+    font-size: 13px;
+    display: flex;
+}
+
+#logo1{
+    font-size: 17px;
+    color: grey;
+}
+
+#co{
+    height: 23px;
+    width: 70px;
+    background-color: #4285F4;
+    color: white;
+    font-size: 13px;
+    border: solid 1px gray;
+}
+
+#case2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#case3{
+    display: flex;
+    justify-content: center;
+}
+
+#Bar{
+    width: 520px;
+    height: 38px;
+
+    border: none;
+    outline: none;
+    font-size: 21px;
+}
+
+#block{
+    border: solid 1px lightgrey;
+    border-radius: 30px;
+    height: 40px;
+    width: 590px;
+    margin-top: 28px;
+}
+
+#logo2{
+    color: lightgrey;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+#logo3{
+    color: #4285F4;
+}
+
+#case4{
+    display: flex;
+    justify-content: center;
+}
+
+#button1, #button2{
+    height: 40px;
+    width: 148px;
+    border-radius: 5px;
+    margin: 5px;
+    margin-top: 25px;
+    border: none;
+    outline-color: #4285F4;
+    background-color: rgb(248, 248, 248);
+}
+
+#invisible{
+    height: 250px;
+    width: auto;
+}
+
+footer{
+    background-color: rgb(243, 243, 243);
+    font-size: 15px;
+}
+
+#case5{
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+}
+
+#caseDroite{
+    display: flex;
+    justify-content: flex-start;
+}
+
+#caseGauche{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#caseGauche > div{
+    margin: 10px;
+}
+
+#caseDroite > div{
+    margin: 10px;
+}
+
+#France{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 1px  rgb(206, 206, 206);
+}
+
+#Fr{
+    padding-left: 10px;
+}
